@@ -27,9 +27,9 @@ export type Student = {
   email: string;
   contactNo: string;
   emergencyContactNo: string;
-  bloogGroup?: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
+  bloodGroup?: 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
+  permanentAddress: string;
   presentAddress: string;
-  permanentAddres: string;
   guardian: Guardian;
   localGuardian: LocalGuardian;
   profileImg?: string;
