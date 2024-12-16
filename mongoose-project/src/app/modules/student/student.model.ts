@@ -155,6 +155,16 @@ const studentSchema = new Schema<TStudent, StudentModel>({
   },
 });
 
+// pre save middleware / hook : will work crate() and save()
+
+studentSchema.pre('save', function () {
+  console.log(this, 'pre hook : we will save t0 data');
+});
+// post save middleware
+studentSchema.post('save', function () {
+  console.log(this, 'post hook : we  save our data');
+});
+
 // creating s custom static method
 studentSchema.static('isUserExists', async function (id: string) {
   const existingUser = await this.findOne({ id }); // 'this' refers to the model
